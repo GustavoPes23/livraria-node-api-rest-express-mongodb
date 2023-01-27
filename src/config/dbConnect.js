@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
+import * as dotenv from 'dotenv'
+dotenv.config()
 
-mongoose.connect("mongodb+srv://gustavo:dDCyMY0mwvFFXUde@cluster0.o2dwn5s.mongodb.net/livraria-alura-node");
+mongoose.connect(process.env.MONGO_URL);
 
 let db = mongoose.connection;
 
